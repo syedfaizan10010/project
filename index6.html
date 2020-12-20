@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<title>Instatnt Money Transfer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<body>
+
+
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
+  <h1 class="w3-xxxlarge w3-text-theme"><img src="logo.png"class="rounded"   style="width:80px;">The BAnk </h1>
+ 
+  <a href="2.html" class="w3-bar-item w3-button">Home</a>
+  <a href="1.html" class="w3-bar-item w3-button">About us</a>
+  <a href="3.html" class="w3-bar-item w3-button">Back</a>
+  
+   <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
+</nav>
+
+
+<header class="w3-container w3-theme w3-padding" id="myHeader">
+  <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i> 
+  <div class="w3-center">
+  <h1 class="w3-xxxlarge w3-animate-bottom">Customer Balance</h1>
+   </header>
+
+<body>
+
+<div class="w3-container">
+
+
+  <table class="w3-table-all">
+    <thead>
+      <tr class="w3-light-grey w3-hover-red">
+        <th> Name</th>
+        <th>Email-id </th>
+        <th>Acc.NO</th>
+        <th>Acc.Balance </th>
+      </tr>
+    </thead>
+    
+         <tr class="w3-hover-black">
+      <td>Saleem</td>
+      <td>tf_saleem08@mail.com</td>
+      <td>9969 xxxx xxxx</td>
+      <td>16,900.05 $ </td>
+    </tr>
+    
+    <tr class="w3-hover-blue">
+      <td>Samaa</td>
+      <td>samaa78@mail.com</td>
+      <td>2085 xxxx xxxx</td>
+      <td> 5,050.61 $ </td>
+    </tr>
+    <tr class="w3-hover-black">
+      <td>Sahana</td>
+      <td>sahana45@mail.com </td>
+      <td>5234 xxxx xxxx</td>
+      <td>22,500.00 $ </td>
+    </tr>
+        <tr class="w3-hover-blue">
+      <td>Faisal</td>
+      <td>Faisal.rock@mail.com</td>
+      <td>1138 xxxx xxxx</td>
+      <td> 18,086.29 $ </td>
+    </tr>
+    <tr class="w3-hover-black">
+      <td>Syed Rizwan</td>
+      <td>syedrizwan_devil5@mail.com</td>
+      <td>1960 xxxx xxxx</td>
+      <td>15,008.33 $ </td>
+    </tr>
+            <tr class="w3-hover-blue">
+      <td>Sindhuja</td>
+      <td>naidusindhu6@mail.com</td>
+      <td>8934 xxxx xxxx</td>
+      <td> 25,056.53 $ </td>
+    </tr>
+        <tr class="w3-hover-grey">
+      <td>Muskan</td>
+      <td>silentmuskan25@mail.com</td>
+      <td>9934 xxxx xxxx</td>
+      <td> 19,001.05 $ </td>
+    </tr>
+                <tr class="w3-hover-blue">
+      <td>Mehek</td>
+      <td>firdouse_mehek05@mail.com</td>
+      <td> 2205 xxxx xxxx</td>
+      <td> 28,500.02 $ </td>
+    </tr>
+
+                    <tr class="w3-hover-blue">
+      <td>Khayum</td>
+      <td>kite_khayum91@mail.com</td>
+      <td>6636 xxxx xxxx</td>
+      <td> 7,850.00 $ </td>
+    </tr>
+    <tr class="w3-hover-grey">
+      <td>Syed</td>
+      <td>Syed10010@mail.com</td>
+      <td>1034 xxxx xxxx</td>
+      <td> 10,950.90 $ </td>
+    </tr>
+  </table>
+</div>
+
+</body>
+
+<footer class="w3-container w3-theme-dark w3-padding-16">
+  <h3>The Spark Foundation Project</h3>
+  <p> Basic Banking System </p>
+  <p>Designed by Syed Faizan </p>
+  <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-theme-light w3-padding">Go To Top</span>  
+    <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+
+</footer>
+
+
+
+<script>
+
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "100%";
+  x.style.fontSize = "40px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+    activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-dark-grey";
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+
+function myAccFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+
+var slideIndex = 1;
+
+function plusDivs(n) {
+  slideIndex = slideIndex + n;
+  showDivs(slideIndex);
+}
+
+function showDivs(n) {
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+showDivs(1);
+
+
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 5;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+</script>
+
+</body>
+</html>
